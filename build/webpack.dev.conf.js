@@ -38,7 +38,7 @@ new webpack.NoEmitOnErrorsPlugin(),
 new FriendlyErrorsPlugin()
 ]
 plugins.push.apply(plugins,initHtmlPlugins());
-console.log(plugins)
+
 module.exports = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap })
