@@ -1,0 +1,139 @@
+
+
+@import "../../style/color";
+@import "../../style/var";
+.root-container{
+  padding-bottom: 200px;
+  background: #ffffff;
+  .header{
+    padding: 15px;
+    border-bottom: 1px solid #ececec;
+    p:nth-child(1){
+      padding-bottom: 6px;
+    }
+
+  }
+
+  .shop-cart-group{
+    .item{
+      display: flex;
+      padding:15px;
+      border-bottom: 1px dashed #cccccc;
+      background: #ffffff;
+      .yd-checkbox-icon{
+        color: @primary !important;
+      }
+      &:first-child{
+        padding-top: 15px;
+      }
+      .yd-checkbox-text{
+        display: none;
+      }
+      .selection{
+        width: 35px;
+      }
+      .face{
+        width: 60px;
+        height: 60px;
+        border-radius: 3px;
+        img{
+          height: 100%;
+        }
+      }
+      .description{
+        flex:1;
+        padding-left: 15px;
+        position: relative;
+      }
+      .props{
+        padding-top: 10px;
+        font-size: 14px;
+        color: #989898;
+      }
+      .title{
+        font-size: 16px;
+        color: #333333;
+      }
+      .amount,.amount-sum{
+        color: #666666;
+        font-size: 14px;
+        display: block;
+
+      }
+      .amount{
+        padding:6px 0;
+      }
+
+      .yd-spinner{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+      }
+    }
+  }
+
+
+
+
+  .discount-group{
+    .title{
+      background: #f1f1f1;
+      padding: 10px 0;
+      padding-left: 15px;
+    }
+    .group{
+      line-height: 32px;
+      padding: 10px 15px;
+    }
+    button{
+      float: right;
+    }
+    border-bottom: 1px solid #ececec;
+    .amount-transport{
+      padding-left: 42px;
+    }
+  }
+
+
+
+
+  .cart-footer{
+    position: fixed;
+    bottom:@footerHeight;
+    width: 100%;
+    display: flex;
+    background: #ffffff;
+    border-bottom: 1px solid #ececec;
+    z-index: 999;
+    .amount{
+      flex: 1;
+      color: @primary;
+      font-size: 18px;
+      padding-left: 15px;
+    }
+    .yd-btn{
+      width: 25%;
+      border-radius: 0;
+      padding: 10px 0;
+      font-size: 16px;
+    }
+  }
+
+  .empty-cart{
+    margin: 100px auto;
+    width: 50%;
+    img{
+      width: 100%;
+    }
+    p{
+      color: #989898;
+      font-size: 14px;
+      padding-top: 10px;
+      text-align: center;
+    }
+  }
+
+}
+
+

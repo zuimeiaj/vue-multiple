@@ -1,0 +1,90 @@
+
+
+@import "../../style/color";
+@import "../../style/var";
+.root-container{
+  padding-bottom: 100px;
+
+  i{
+    font-size: 16px !important;
+  }
+
+  .shop-cart-group{
+    padding-bottom: 150px;
+    .item{
+      display: flex;
+      padding:15px;
+      border-bottom: 1px dashed #cccccc;
+      background: #ffffff;
+      .yd-checkbox-icon{
+        color: @primary !important;
+      }
+      &:first-child{
+        padding-top: 15px;
+      }
+      .yd-checkbox-text{
+        display: none;
+      }
+      .selection{
+        width: 35px;
+      }
+      .face{
+        width: 100px;
+        height: 100px;
+        border-radius: 3px;
+        img{
+          height: 100%;
+        }
+      }
+      .description{
+        flex:1;
+        padding-left: 15px;
+        position: relative;
+      }
+      .props{
+        padding-top: 6px;
+        padding-bottom: 8px;
+        font-size: 14px;
+        color: #989898;
+        display: block;
+      }
+      .title{
+        font-size: 18px;
+        color: #333333;
+      }
+      .detail{
+        color: #666666;
+        font-size: 12px;
+        display: block;
+        padding-bottom: 10px;
+      }
+      .yd-btn{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+      }
+      .phone{
+        color: #666666;
+      }
+    }
+  }
+
+
+  .empty-cart{
+    margin: 100px auto;
+    width: 50%;
+    img{
+      width: 100%;
+    }
+    p{
+      color: #989898;
+      font-size: 14px;
+      padding-top: 10px;
+      text-align: center;
+    }
+  }
+
+}
+
+

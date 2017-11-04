@@ -1,0 +1,87 @@
+<%= htmlWebpackPlugin.options.commonData.header%>
+
+
+<div class="root-container" v-cloak id="app-root">
+
+    <div class="empty-cart" v-if="shopCartData.length===0">
+        <img width="100%" src="/static/empty.png"/>
+        <p>呃，身体感觉被掏空～～</p>
+    </div>
+
+
+    <div class="header">
+        <p>订单编号：10098</p>
+        <p>下单时间：2019-09-08 23:23:12</p>
+    </div>
+
+
+    <ul class="shop-cart-group">
+
+        <li v-for="item in shopCartData" class="item">
+            <div class="vh-center face">
+                <img :src="item.logo"/>
+            </div>
+            <div class="description">
+                <div class="title">{{item.good_name}}</div>
+
+                <span class="amount">单价：¥{{item.sale_price}} x 4</span>
+                <span class="amount-sum">小计：¥{{item.sale_price}}</span>
+
+            </div>
+
+        </li>
+
+
+    </ul>
+
+
+    <div class="discount-group">
+        <div class="title">优惠信息</div>
+        <div class="group">
+            已选优惠券：满100元减50元
+            <yd-button type="danger">选择优惠券</yd-button>
+        </div>
+    </div>
+    <div class="discount-group">
+        <div class="title">订单金额</div>
+        <div class="group">
+            <p class="amount-transport">邮费：5元</p>
+            <p>订单总金额：99元</p>
+            <p>优惠总金额：10元</p>
+
+        </div>
+    </div>
+    <div class="discount-group">
+        <div class="title">收货地址</div>
+        <div class="group">
+            四川省眉山时刻的房间里看电视剧
+            <yd-button type="danger">选择收货地址</yd-button>
+        </div>
+    </div>
+
+    <div class="discount-group">
+        <div class="title">买家留言</div>
+        <div class="group">
+            <yd-textarea placeholder="选填：本次交易注意事项" maxlength="100"></yd-textarea>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <footer class="cart-footer">
+        <span class="amount v-center"> 合计：¥{{totalAmount}}</span>
+        <yd-button>稍后支付</yd-button>
+        <yd-button type="danger">立即支付</yd-button>
+
+
+    </footer>
+
+    <footer-bar></footer-bar>
+
+</div>
+
+<%= htmlWebpackPlugin.options.commonData.footer%>

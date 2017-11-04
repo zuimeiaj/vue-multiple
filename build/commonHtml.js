@@ -1,3 +1,5 @@
+const Header=(title)=>(`
+
 <!DOCTYPE html>
 <html lang="cn">
 <head>
@@ -10,11 +12,25 @@
     <meta content="telephone=no" name="format-detection"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta http-equiv="Pragma" content="no-cache">
-    <link href="" rel="stylesheet" type="type/css"/>
-    <script src="" type="type/javascript"></script>
-    <title></title>
+    
+    <link href="/static/normalize.css" rel="stylesheet" />
+    <title>${title}</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
 </head>
 <body>
+`);
 
+
+const Footer =()=>(
+    `
 </body>
-</html>
+</html>`
+)
+
+module.exports={
+    Footer,Header
+}

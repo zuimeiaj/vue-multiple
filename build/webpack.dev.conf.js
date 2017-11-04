@@ -5,7 +5,8 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-
+var pageConf =require("./pageConf");
+var HtmlConf=require("./commonHtml");
 const views =Object.keys(baseWebpackConfig.entry);
 // add hot-reload related code to entry chunks
 views.forEach(function (name) {
@@ -18,8 +19,13 @@ const initHtmlPlugins=()=>{
   return views.map(item=>{
    return new HtmlWebpackPlugin({
       filename:`${item}.html`,
-      template:`src/views/${item}.html`,
+      template:`src/views/${item}/index.html`,
       inject:true,
+      commonData:{
+          header:HtmlConf.Header(pageConf[item]),
+          footer:HtmlConf.Footer()
+          
+      },
       chunks:[item]
     })
   })

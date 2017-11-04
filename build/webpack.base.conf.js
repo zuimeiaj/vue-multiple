@@ -1,17 +1,25 @@
 var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
-var vueLoaderConfig = require('./vue-loader.conf')
+var vueLoaderConfig = require('./vue-loader.conf');
+var pages =require("./pageConf");
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
+
+const mapPagesToEntry=()=>{
+    let maps={}
+    
+    for(let page in pages){
+        maps[page]=`./src/views/${page}/index.js`;
+    }
+   
+    return maps;
+}
 module.exports = {
-  entry: {
-    index: './src/js/index.js',
-    home:"./src/js/home.js"
-  },
+  entry: mapPagesToEntry(),
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',

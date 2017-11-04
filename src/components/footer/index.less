@@ -1,0 +1,27 @@
+
+@import "../../style/color";
+.g-footer-bar{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: #ffffff;
+  z-index: 999;
+  height: 60px;
+  color: #989898;
+  .on{
+    color: @primary;
+  }
+  ul{
+    display: flex;
+    li{
+      flex: 1;
+      text-align: center;
+      border-right: 1px solid #ececec;
+      &:last-child{
+        border-right:0;
+      }
+    }
+  }
+
+}

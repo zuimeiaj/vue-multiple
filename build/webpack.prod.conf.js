@@ -14,7 +14,7 @@ const initHtmlPlugins=()=>{
   return views.map(item=>{
    return new HtmlWebpackPlugin({
       filename:`${item}.html`,
-      template:`src/views/${item}.html`,
+      template:`src/views/${item}/index.html`,
       inject:true,
       chunks:[item,'vendor']
     })
