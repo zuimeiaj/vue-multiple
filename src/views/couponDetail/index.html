@@ -1,0 +1,50 @@
+
+
+    <%= htmlWebpackPlugin.options.commonData.header%>
+
+
+    <div class="root-container" v-cloak id="app-root">
+
+           <div class="banner">
+
+               <div class="title">现金优惠券</div>
+               <div class="amount">
+                   <strong>500</strong>元
+               </div>
+               <p class="condition">满10000元可用</p>
+
+           </div>
+
+
+        <div class="content">
+            <p class="title">全场通用券</p>
+            <p class="range">兑换时间：2018-09-09  ~ 2019-09-09 </p>
+            <p class="rules">使用范围：全平台通用</p>
+        </div>
+
+        <div class="exchange">
+
+            <yd-input placeholder="请输入兑换商品名称"></yd-input>
+            <yd-button size="large">兑换</yd-button>
+        </div>
+
+        <div class="show-code">
+                <vue-qr :size="200" value="wwww.baidu.com"></vue-qr>
+                <p>兑换码：2434234234</p>
+        </div>
+
+
+        <p class="gutter-h">注：请妥善保管二维码，在有效期内使用，过期作废</p>
+        <div class="gutter-h">
+              <yd-button size="large">领取</yd-button>
+          </div>
+
+
+
+
+
+
+
+    </div>
+
+    <%= htmlWebpackPlugin.options.commonData.footer%>

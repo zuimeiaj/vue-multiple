@@ -1,0 +1,40 @@
+
+
+    <%= htmlWebpackPlugin.options.commonData.header%>
+
+
+    <div class="root-container" v-cloak id="app-root">
+
+
+
+        <div class="header">
+            <p> 实付金额</p>
+          <strong>1299.00</strong>元
+        </div>
+
+
+
+
+
+        <yd-cell-group class="cell-group" title="选择支付方式">
+            <yd-cell-item  type="radio">
+                <img slot="icon" src="/static/pay-wx.png" height="32" />
+                <span slot="left">微信</span>
+                <input v-model="payment" slot="right" type="radio" value="1003"></input>
+            </yd-cell-item>
+            <yd-cell-item type="radio">
+                <img slot="icon" src="/static/pay-alipay.png" height="32" />
+                <span slot="left">支付宝</span>
+                <input v-model="payment" slot="right" type="radio" value="1004"></input>
+            </yd-cell-item>
+        </yd-cell-group>
+
+        <div class="gutter-h">
+            <yd-button size="large">支付</yd-button>
+        </div>
+
+        <footer-bar></footer-bar>
+
+    </div>
+
+    <%= htmlWebpackPlugin.options.commonData.footer%>

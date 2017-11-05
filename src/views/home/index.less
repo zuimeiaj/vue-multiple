@@ -51,7 +51,6 @@
   .slide-category{
 
     padding: 20px 0;
-    border-bottom: 1px solid #ececec;
     overflow: hidden;
     background: #ffffff;
     .category-item{
@@ -78,6 +77,9 @@
       float: left;
       width: 50%;
       padding: 8px ;
+      background: #ffffff;
+      border-right: 1px solid #f1f1f1;
+      border-top: 1px solid #f1f1f1;
 
       &:nth-child(odd){
         padding-left: 4px;
@@ -107,7 +109,6 @@
           font-size: 14px;
           color: #666666;
           padding: 10px 0;
-          border-bottom: 1px dashed #cccccc;
         }
         .amount{
           overflow: hidden;
@@ -136,10 +137,13 @@
 
   .brand-merchant{
     overflow: hidden;
+    background: #ffffff;
     .merchant-item{
       float: left;
       width: 50%;
       padding: 8px ;
+      border-right: 1px solid #f1f1f1;
+      border-top: 1px solid #f1f1f1;
       &:nth-child(odd){
         padding-left: 4px;
       }
@@ -148,7 +152,6 @@
 
       }
       .inner{
-        border-radius: 4px;
         overflow: hidden;
         display: flex;
         flex-direction:column;
@@ -182,6 +185,7 @@
   position: relative;
   background: #ffffff;
   padding: 15px 0;
+  border-top: 1px solid #f1f1f1;
   .yd-btn{
     position: absolute;
     right: 15px;

@@ -7,5 +7,10 @@ module.exports={
     address:"收货地址",
     merchant:"店铺",
     orderDetail:"订单详情",
-    shop:"店铺"
+    shop:"店铺",
+    cashier:"收银台",
+    goods:"商品详情",
+    couponDetail:"领取优惠券",
+    verifyCoupon:"验券",
+    exchange:"兑换记录"
 };
