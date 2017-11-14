@@ -22,11 +22,14 @@ const Header=(title)=>(`
     </style>
 </head>
 <body>
+
+<div v-cloak class="app-root-container" id="app-root">
 `);
 
 
 const Footer =()=>(
     `
+</div>
 </body>
 </html>`
 )

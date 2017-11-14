@@ -8,6 +8,8 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+var pageConf =require("./pageConf");
+var HtmlConf=require("./commonHtml");
 const views =Object.keys(baseWebpackConfig.entry);
 var env = config.build.env
 const initHtmlPlugins=()=>{
@@ -16,7 +18,12 @@ const initHtmlPlugins=()=>{
       filename:`${item}.html`,
       template:`src/views/${item}/index.html`,
       inject:true,
-      chunks:[item,'vendor']
+      chunks:[item,'manifest','vendor'],
+       commonData:{
+           header:HtmlConf.Header(pageConf[item]),
+           footer:HtmlConf.Footer()
+        
+       }
     })
   })
 }

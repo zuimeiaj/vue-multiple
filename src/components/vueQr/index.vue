@@ -26,10 +26,6 @@
                     correctLevel : QRCode.CorrectLevel.H
                 });
             })
-
-
-
-
         }
     }
 </script>
